@@ -1,4 +1,4 @@
-# 🍄 Mushroom Classification with a Decision Tree
+# Mushroom Classification with a Decision Tree
 
 ## Overview
 
@@ -8,7 +8,7 @@ I used a decision tree model because it's easy to interpret and works well with 
 
 ---
 
-## 🗂️ Dataset Details
+## Dataset Details
 
 - Format: Tabular CSV
 - Size: 8124 rows × 23 columns
@@ -20,7 +20,7 @@ I used a decision tree model because it's easy to interpret and works well with 
 
 ---
 
-## 🧹 Data Cleaning & Preprocessing
+## Data Cleaning & Preprocessing
 
 - Most of the dataset was already pretty clean.
 - One column, `stalk-root`, had some missing values marked as `'?'`. I replaced those with the mode (most common value).
@@ -29,13 +29,13 @@ I used a decision tree model because it's easy to interpret and works well with 
 
 ---
 
-## 📊 Visualizations
+## Visualizations
 
 To better understand the data, I plotted frequency distributions for each feature to see how the categories were spread out. This helped me get a sense of which features might be most useful for classification.
 
 ---
 
-## 🤖 Model & Approach
+## Model & Approach
 
 - **Model Used:** Basic `DecisionTreeClassifier` from `sklearn`
 - **Why Decision Tree?** It handles categorical data well and provides easy-to-understand logic.
@@ -44,7 +44,7 @@ To better understand the data, I plotted frequency distributions for each featur
 
 ---
 
-## ✅ Results
+## Results
 
 The model reached **100% accuracy** on the test set. This isn’t too surprising given the clean nature of the data and how well the classes are separated.
 
@@ -52,9 +52,9 @@ While this result is great, it's worth noting that real-world datasets are rarel
 
 ---
 
-## 🔁 Reproducibility Steps
+## Reproducibility Steps
 
-To try it yourself:
+To recreate:
 1. Load the dataset from Kaggle.
 2. Replace `'?'` values in the `stalk-root` column with the mode.
 3. Drop uninformative features.
@@ -63,7 +63,7 @@ To try it yourself:
 
 ---
 
-## 🧰 Tech Stack
+## Libraries used
 
 - Python
 - pandas
@@ -76,12 +76,11 @@ To try it yourself:
 
 ## 📁 Files in This Repo
 
-- `MushroomKaggleChallenge.ipynb` – Full notebook with code and visualizations  
-- `README.md` – This file
+- `MushroomKaggleChallenge.ipynb`  
+- `README.md` – 
 
 ---
 
 ## 📚 Dataset Credit
 
 - [Kaggle Mushroom Dataset](https://www.kaggle.com/datasets/uciml/mushroom-classification/data)
-- [Discussion thread on dataset](https://www.kaggle.com/datasets/uciml/mushroom-classification/discussion/198420)
