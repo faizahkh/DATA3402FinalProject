@@ -1,37 +1,87 @@
-## Mushroom Classification using decision tree classifier
-# Overview
-* This repository holds an attempt to use decision tree classifiers and method to the features of mushrooms given in a dataset, in the Mushroom Classification Kaggle Dataset: https://www.kaggle.com/datasets/uciml/mushroom-classification/data
-* The approach in this repository formula was to take the idea of classification and use it on varous species of mushrooms to see predict mushroom's 'edibility'.
-* Summary: The decision tree classifier method predicted the edible state with 1.0 (100%) accuracy within the model, given that it was a dataset with minimal missing values. The factors 
-## DATA
-* Data type: categorical; tabular data (CSV file)
-* Size: 8124 rows, 23 columns/features
-* Instances (Training: 4863, Validation: 1621, Testing: 1622)
-# Cleaning up data/pre-processing
-* The data was fairly clean with very minimal missing values. In this case, I had the feature called "stalk-root", which had a '?' in place of a characteristic in it so I were able to change those unknown values to create and replace with class value/mode (written in code)
-* ![stalk picture](stalk.png)
-* ![after stalk](afterstalk.png)
-* Additional features, such as gill-attach and veil-type were removed because they had very little significance to the overall dataset and would cause a shift in training the model.
-# Data Visualization
-* I decided to go ahead and use a code that would be able to showcase all the graphs with their respective categories and features, and the letters that correspond to the variables. There is a distinct measure of multiple types of features and frequencies of each characteristic of the mushrooms and how to use it for training dataset.
-* ![frequency](color.png)
-* ![class](classdist.png)
-# Problem
-* The inputs were: mushroom characteristics and features
-* Output was: prediction of being edible as a mushroom
-* Model: Basic decision tree classification since it made value simpler to understand and code with through cleaned up data.
-* Trained with normal parameters, no hyper tuning parameters used.
-# Conclusions:
-* Got an accuracy of 1.00 which was attainable given simpler data and less processing. The model should predict edible mushrooms 100% of time using the model and accuracy results.
-* ![accuracy](precision.png)
-# Reproducing Results: 
-* Seperate features and perform one-hot encoding of categorical variables, create a new clean dataset.
-* Use the decision tree classifications.
-* Convert unknown variables in stalk-root feature.
-* Use 'sklearn' and get rid of columns that might affect the fitting; pre-process and visualize all the categories beforehand.
-# Repository files:
-* README file
-* MushroomKaggleChallenge.ipynb file
-# Software:
-* pandas as pd
-* numpy as np
+# 🍄 Mushroom Classification with a Decision Tree
+
+## Overview
+
+This project explores whether a mushroom is edible or poisonous based on its physical features using a decision tree classifier. The data comes from the [Kaggle Mushroom Classification dataset](https://www.kaggle.com/datasets/uciml/mushroom-classification/data), which includes various characteristics like cap shape, gill color, and stalk root type.  
+
+I used a decision tree model because it's easy to interpret and works well with categorical data. With some basic preprocessing, the model ended up achieving perfect accuracy—100%—on the test set, likely because the dataset is well-structured and the classes are clearly separable.
+
+---
+
+## 🗂️ Dataset Details
+
+- Format: Tabular CSV
+- Size: 8124 rows × 23 columns
+- Features: All are categorical
+- Split:  
+  - Training: 4863 samples  
+  - Validation: 1621 samples  
+  - Test: 1622 samples
+
+---
+
+## 🧹 Data Cleaning & Preprocessing
+
+- Most of the dataset was already pretty clean.
+- One column, `stalk-root`, had some missing values marked as `'?'`. I replaced those with the mode (most common value).
+- Dropped columns like `veil-type` and `gill-attachment` since they didn't add much and had very low variance.
+- Used one-hot encoding to convert categorical features into numerical format for the model.
+
+---
+
+## 📊 Visualizations
+
+To better understand the data, I plotted frequency distributions for each feature to see how the categories were spread out. This helped me get a sense of which features might be most useful for classification.
+
+---
+
+## 🤖 Model & Approach
+
+- **Model Used:** Basic `DecisionTreeClassifier` from `sklearn`
+- **Why Decision Tree?** It handles categorical data well and provides easy-to-understand logic.
+- I didn’t do any hyperparameter tuning—just used the default settings to keep it simple.
+- Trained the model on the processed dataset after encoding.
+
+---
+
+## ✅ Results
+
+The model reached **100% accuracy** on the test set. This isn’t too surprising given the clean nature of the data and how well the classes are separated.
+
+While this result is great, it's worth noting that real-world datasets are rarely this clean or well-structured.
+
+---
+
+## 🔁 Reproducibility Steps
+
+To try it yourself:
+1. Load the dataset from Kaggle.
+2. Replace `'?'` values in the `stalk-root` column with the mode.
+3. Drop uninformative features.
+4. Apply one-hot encoding to the categorical columns.
+5. Train a `DecisionTreeClassifier` using `scikit-learn`.
+
+---
+
+## 🧰 Tech Stack
+
+- Python
+- pandas
+- numpy
+- seaborn
+- matplotlib
+- scikit-learn
+
+---
+
+## 📁 Files in This Repo
+
+- `MushroomKaggleChallenge.ipynb` – Full notebook with code and visualizations  
+- `README.md` – This file
+
+---
+
+## 📚 Dataset Credit
+
+- [Kaggle Mushroom Dataset](https://www.kaggle.com/datasets/uciml/mushroom-classification/data)
+- [Discussion thread on dataset](https://www.kaggle.com/datasets/uciml/mushroom-classification/discussion/198420)
