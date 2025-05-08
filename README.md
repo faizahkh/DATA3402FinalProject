@@ -26,13 +26,15 @@ I used a decision tree model because it's easy to interpret and works well with 
 - One column, `stalk-root`, had some missing values marked as `'?'`. I replaced those with the mode (most common value).
 - Dropped columns like `veil-type` and `gill-attachment` since they didn't add much and had very low variance.
 - Used one-hot encoding to convert categorical features into numerical format for the model.
-
+*![stalk picture](stalk.png)
+*![after stalk](afterstalk.png)
 ---
 
 ## Visualizations
 
 To better understand the data, I plotted frequency distributions for each feature to see how the categories were spread out. This helped me get a sense of which features might be most useful for classification.
-
+*![frequency](color.png)
+*![class](classdist.png)
 ---
 
 ## Model & Approach
@@ -44,15 +46,15 @@ To better understand the data, I plotted frequency distributions for each featur
 
 ---
 
-## Results
+## Conclusions:
 
 The model reached **100% accuracy** on the test set. This isn’t too surprising given the clean nature of the data and how well the classes are separated.
 
 While this result is great, it's worth noting that real-world datasets are rarely this clean or well-structured.
-
+* ![accuracy](precision.png)
 ---
 
-## Reproducibility Steps
+## Reproducing Results:
 
 To recreate:
 1. Load the dataset from Kaggle.
@@ -63,24 +65,25 @@ To recreate:
 
 ---
 
-## Libraries used
+## Libraries used/Software
 
 - Python
-- pandas
-- numpy
-- seaborn
-- matplotlib
+- pandas as pd
+- numpy as np
+- seaborn as sns
+- matplotlib.pyplot
 - scikit-learn
+- sklearn.tree, sklearn.model, sklearn.metrics
 
 ---
 
-## 📁 Files in This Repo
+## Repository Files
 
 - `MushroomKaggleChallenge.ipynb`  
 - `README.md` – 
 
 ---
 
-## 📚 Dataset Credit
+## Citations/Dataset
 
 - [Kaggle Mushroom Dataset](https://www.kaggle.com/datasets/uciml/mushroom-classification/data)
