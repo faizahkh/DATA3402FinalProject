@@ -4,7 +4,7 @@
 
 This project explores whether a mushroom is edible or poisonous based on its physical features using a decision tree classifier. The data comes from the [Kaggle Mushroom Classification dataset](https://www.kaggle.com/datasets/uciml/mushroom-classification/data), which includes various characteristics like cap shape, gill color, and stalk root type.  
 
-I used a decision tree model because it's easy to interpret and works well with categorical data. With some basic preprocessing, the model ended up achieving perfect accuracy—100%—on the test set, likely because the dataset is well-structured and the classes are clearly separable.
+I used a decision tree model because it's easy to interpret and works well with categorical data. With some basic preprocessing, the model ended up achieving perfect accuracy (1.0) on the test set, likely because the dataset is well-structured and the classes are clearly separable.
 
 ---
 
