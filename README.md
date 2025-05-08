@@ -27,7 +27,7 @@ I used a decision tree model because it's easy to interpret and works well with 
 - Dropped columns like `veil-type` and `gill-attachment` since they didn't add much and had very low variance.
 - Used one-hot encoding to convert categorical features into numerical format for the model.
 *![stalk picture](stalk.png)
-*![after stalk](afterstalk.png)
+*![afterstalk](afterstalk.png)
 ---
 
 ## Visualizations
