@@ -24,7 +24,7 @@
 # Conclusions:
 * Got an accuracy of 1.00 which was attainable given simpler data and less processing. The model should predict edible mushrooms 100% of time using the model and accuracy results.
 * ![accuracy](precision.png)
-# Reproducing Results:
+# Reproducing Results: 
 * Seperate features and perform one-hot encoding of categorical variables, create a new clean dataset.
 * Use the decision tree classifications.
 * Convert unknown variables in stalk-root feature.
